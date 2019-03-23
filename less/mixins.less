@@ -1,0 +1,35 @@
+//Mixins here
+.bottom-dashed-border {
+  border-bottom: 2px dashed @navigation-border;
+}
+
+.top-dashed-border {
+  border-top: 2px dashed @navigation-border;
+}
+
+.sign-up-button (@background-color, @text-color){
+  width: 82%;
+  color: @text-color;
+  background-color: @background-color;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px black;
+  &:hover {
+    color: @background-color;
+    background-color: @text-color;
+  }
+}
+
+@keyframes shake {
+    0% {margin-left: 0px;}
+    50% {margin-left: 30px;}
+    100% {margin-left: 0px;}
+}
+
+.shake{
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
