@@ -1,12 +1,17 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Route } from 'react-router';
+import Navigation from './Navigation';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <Navigation/>
-      </div>
+      <Router>
+        <div className="App">
+          <Route path="/" component={Navigation} />
+        </div>
+      </Router>
     );
   }
 }
