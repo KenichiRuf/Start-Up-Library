@@ -2,7 +2,10 @@ import React from 'react';
 
 const Video = (props) => {
   return(
-    <iframe width="600" height="400" src={props.url}></iframe>
+    <div>
+      <iframe width="600" height="400" src={props.video.url.replace('watch?v=', 'embed/')} title={props.video.url}></iframe>
+      <p>{props.video.why}</p>
+    </div>
   )
 }
 

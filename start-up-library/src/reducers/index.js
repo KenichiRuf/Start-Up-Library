@@ -13,12 +13,12 @@ export const reducer = (state = initialState, action) => {
         ...state,
       }
     case ADD_VIDEO_SUCCESS:
-      return{
+      return {
         ...state,
-        videos: action.payload,
+        videos: [...state.videos, action.payload]
       }
     case ADD_VIDEO_FAILURE:
-      return{
+      return {
         ...state,
         error: action.payload
       }
