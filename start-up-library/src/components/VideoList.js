@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const VideoList = (props) => {
   return(
-    props.videos.map(video => <Video video={video} key={video.url}/>)
+    props.videos.reverse().map(video => <Video video={video} key={video.url}/>)
   )
 }
 
